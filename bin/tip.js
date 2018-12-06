@@ -1,21 +1,27 @@
 /* eslint-disable no-console */
-/**
- * help output
- *
- * @return {String}  help description
- */
+/******************************
+ * @file: tip
+ * @author:leinov
+ ******************************/
+
 const chalk = require("chalk");
 
+/**
+ * help output
+ * @param {String} version
+ * @return {String}  help description
+ */
 function help(version){
 	console.log(chalk.blueBright(`
-wrmp-cli: ${version}
-Usage: https://github.com/leinov/webpack-react-multi-page
-options:
-[init] [name]       create a new blog template
-[-v]                view the version of cli
+    wrmp-cli: ${version}
+    Usage: https://github.com/leinov/webpack-react-multi-page
 
-example:
-somb init myproject   create a myproject 
+    options:
+    [init] [name]       create a new blog template
+    [-v]                view the version of cli
+
+    example:
+    wrmp init myproject   create a myproject 
 		`));
 }
 

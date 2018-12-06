@@ -3,6 +3,12 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 
+/******************************
+ * @file: wrmp-cli
+ * @desc: create webpack-react-multi-page cli
+ * @author: leinov
+ ******************************/
+
 const fs = require("fs-extra");
 const path = require("path");
 const chalk = require("chalk");
@@ -12,9 +18,11 @@ const argv = process.argv;
 let packageJson ={};
 
 try{
-	packageJson = require(path.resolve(process.cwd(),"package.json"));
+	packageJson = require(path.resolve(__dirname,"../package.json"));
 }catch(err){
-	console.log(chalk.red("no package.json!"));
+	if(argv[2]!= "init"){
+		console.log(chalk.red("no package.json!"));
+	}
 }
 
 // init project
@@ -22,28 +30,31 @@ function init(dist){
 	console.log(chalk.green("creating..."));
 	Git.Clone("https://github.com/leinov/webpack-react-multi-page", dist).then(()=>{
 		fs.removeSync(path.resolve(dist,".git")); 
+		fs.removeSync(path.resolve(dist,"_config.yml"));
 		console.log(chalk.blueBright(`${dist} created success !`));
 	});
 }
 
 // main function
 function main(){
-	if(!argv[2]){
-		tip.help(packageJson.version);
-	}
-	if(argv[2] == "init"){
+	switch (argv[2]) {
+	case "init":
 		if(!argv[3]){
-			console.log(tip.error("请输入要创建的名称"));
+			console.log(tip.error("input project name"));
 		}else{
 			init(argv[3]);
 		}
-	}
-	if(argv[2] == "--help"){
-		tip.help();
-	}
-	if(argv[2] === "-v"){
+		break;
+	case "--help":
+		tip.help(packageJson.version);
+		break;
+	case "-v":
 		console.log(`version: ${packageJson.version}`);
+		break;
+	default:
+		tip.help(packageJson.version);
 	}
+	
 }
 
 main();

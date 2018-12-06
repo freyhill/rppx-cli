@@ -1,6 +1,6 @@
 {
   "name": "wrmp-cli",
-  "version": "0.1",
+  "version": "0.0.3",
   "description": "cli of install webpck-react-multi-pages",
   "main": "bin/index.js",
   "bin": {
@@ -23,11 +23,11 @@
     "cli"
   ],
   "author": "leinov",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leinov/wrmp-cli/issues"
+    "url": "hhttps://github.com/leinov/webpack-react-multi-page/issues"
   },
-  "homepage": "https://github.com/leinov/wrmp-cli#readme",
+  "homepage": "https://github.com/leinov/webpack-react-multi-page#readme",
   "dependencies": {
     "chalk": "^2.4.1",
     "nodegit": "^0.23.0"
