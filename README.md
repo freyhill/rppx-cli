@@ -7,7 +7,6 @@ a cli used to install webpack-react-multi-page project
 
 ```
 npm install wrmp-cli -g
-
 ```
 
 ## create 
