@@ -35,6 +35,7 @@ function error(msg){
 	return chalk.red(`
 ⛑ ⛑ ⛑
 error: ${msg}
+
 Use --help to display the cli options.
   `);
 }

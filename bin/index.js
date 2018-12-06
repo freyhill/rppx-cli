@@ -25,13 +25,47 @@ try{
 	}
 }
 
-// init project
+
+/**
+ * create project
+ * 
+ * @param {*} dist project name
+ */
 function init(dist){
-	console.log(chalk.green("creating..."));
-	Git.Clone("https://github.com/leinov/webpack-react-multi-page", dist).then(()=>{
-		fs.removeSync(path.resolve(dist,".git")); 
-		fs.removeSync(path.resolve(dist,"_config.yml"));
-		console.log(chalk.blueBright(`${dist} created success !`));
+	isExist(dist).then(()=>{
+		console.log(tip.error(`${dist} was exist`));
+	}).catch(()=>{
+		console.log(chalk.blueBright(
+			`
+        ${dist} is creating...
+        `));
+		Git.Clone("https://github.com/leinov/webpack-react-multi-page", dist).then(()=>{
+			fs.removeSync(path.resolve(dist,".git")); 
+			fs.removeSync(path.resolve(dist,"_config.yml"));
+			console.log(chalk.green(
+				`
+        ${dist} created success !
+    
+            `));
+		});
+	});
+}
+
+/**
+ * Determines whether the folder exists
+ *
+ * @param {*} path
+ * @returns
+ */
+function isExist(path) {
+	return new Promise((resolve, reject) => {
+		fs.access(path, (err) => {
+			if (err !== null) {
+				reject(`${path} does not exist`);
+			} else {
+				resolve(true);
+			}
+		});
 	});
 }
 
@@ -54,7 +88,6 @@ function main(){
 	default:
 		tip.help(packageJson.version);
 	}
-	
 }
 
 main();
