@@ -5,16 +5,17 @@
  * @return {String}  help description
  */
 const chalk = require("chalk");
-function help(){
+
+function help(version){
 	console.log(chalk.blueBright(`
-somb: 1.0.0
-Usage: https://github.com/leinov/somb
+wrmp-cli: ${version}
+Usage: https://github.com/leinov/webpack-react-multi-page
 options:
 [init] [name]       create a new blog template
-[-v]                view the version of somb
+[-v]                view the version of cli
 
 example:
-somb init leinov.github.io   create a leinov.github.io project
+somb init myproject   create a myproject 
 		`));
 }
 

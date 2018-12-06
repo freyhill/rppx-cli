@@ -29,7 +29,7 @@ function init(dist){
 // main function
 function main(){
 	if(!argv[2]){
-		tip.help();
+		tip.help(packageJson.version);
 	}
 	if(argv[2] == "init"){
 		if(!argv[3]){
