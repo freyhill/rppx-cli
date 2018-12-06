@@ -16,7 +16,8 @@ try{
 }catch(err){
 	console.log(chalk.red("no package.json!"));
 }
-// 初始化项目
+
+// init project
 function init(dist){
 	console.log(chalk.green("creating..."));
 	Git.Clone("https://github.com/leinov/webpack-react-multi-page", dist).then(()=>{
@@ -25,7 +26,7 @@ function init(dist){
 	});
 }
 
-// 主调函数
+// main function
 function main(){
 	if(!argv[2]){
 		tip.help();
