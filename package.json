@@ -1,6 +1,6 @@
 {
   "name": "rppx-cli",
-  "version": "1.2.9",
+  "version": "1.3.0",
   "description": "cli of install react-multi-page-app",
   "main": "./bin/index.js",
   "bin": {
