@@ -21,7 +21,7 @@ function help(version){
     [-v]                view the version of cli
 
     example:
-    wrmp init myproject   create a myproject 
+    rppx init myproject   create a myproject 
 		`));
 }
 

@@ -6,31 +6,31 @@ a cli used to install react-multi-page-app project
 ## install
 
 ```
-npm install rppx-cli -g
+$ npm install rppx-cli -g
 ```
 
 ## create 
 
 ```
-rppx init myproject
+$ rppx init myproject
 ```
 
 ## dev&build
 
 ```
-cd myproject
+$ cd myproject
 
-npm install
+$ npm install
 
-npm run dev //development
+$ npm run dev //development
 
-npm run build // production
+$ npm run build // production
 ```
 
 ## start
 
 ```
-npm start
+$ npm start
 ```
 
-[view react-multi-page-app](https://github.com/leinov/react-multi-page-app )
+[view react-multi-page-app](https://github.com/leinov/react-multi-page-app)
