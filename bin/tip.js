@@ -13,8 +13,8 @@ const chalk = require("chalk");
  */
 function help(version){
 	console.log(chalk.blueBright(`
-    wrmp-cli: ${version}
-    Usage: https://github.com/leinov/webpack-react-multi-page
+    rppx-cli: ${version}
+    Usage: https://github.com/leinov/react-multi-page-app
 
     options:
     [init] [name]       create a new blog template

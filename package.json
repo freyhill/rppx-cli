@@ -1,14 +1,14 @@
 {
-  "name": "wrmp-cli",
-  "version": "0.0.4",
-  "description": "cli of install webpck-react-multi-pages",
-  "main": "bin/index.js",
+  "name": "rppx-cli",
+  "version": "1.2.5",
+  "description": "cli of install react-multi-page-app",
+  "main": "./bin/index.js",
   "bin": {
-    "wrmp": "./bin/index.js"
+    "rppx": "./bin/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leinov/wrmp-cli.git"
+    "url": "git+https://github.com/leinov/react-multi-page-app.git"
   },
   "keywords": [
     "react",
@@ -25,9 +25,9 @@
   "author": "leinov",
   "license": "MIT",
   "bugs": {
-    "url": "hhttps://github.com/leinov/webpack-react-multi-page/issues"
+    "url": "hhttps://github.com/leinov/react-multi-page-app/issues"
   },
-  "homepage": "https://github.com/leinov/webpack-react-multi-page#readme",
+  "homepage": "https://github.com/leinov/react-multi-page-app#readme",
   "dependencies": {
     "chalk": "^2.4.1",
     "nodegit": "^0.23.0"

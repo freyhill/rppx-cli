@@ -4,8 +4,8 @@
 /* eslint-disable no-undef */
 
 /******************************
- * @file: wrmp-cli
- * @desc: create webpack-react-multi-page cli
+ * @file: rppx-cli
+ * @desc: create react-multi-page-app cli
  * @author: leinov
  ******************************/
 
@@ -39,9 +39,14 @@ function init(dist){
 			`
         ${dist} is creating...
         `));
-		Git.Clone("https://github.com/leinov/webpack-react-multi-page", dist).then(()=>{
+		Git.Clone("https://github.com/leinov/react-multi-page-app", dist).then(()=>{
 			fs.removeSync(path.resolve(dist,".git")); 
 			fs.removeSync(path.resolve(dist,"_config.yml"));
+			fs.removeSync(path.resolve(dist,"README.md"));
+			fs.removeSync(path.resolve(dist,"README-ZH.md"));
+			fs.removeSync(path.resolve(dist,"LICENSE")); 
+			fs.removeSync(path.resolve(dist,"react-multi.png"));  
+			fs.removeSync(path.resolve(dist,"package-lock.json")); 
 			console.log(chalk.green(
 				`
         ${dist} created success !
