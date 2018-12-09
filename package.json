@@ -1,6 +1,6 @@
 {
   "name": "rppx-cli",
-  "version": "1.2.5",
+  "version": "1.2.9",
   "description": "cli of install react-multi-page-app",
   "main": "./bin/index.js",
   "bin": {
@@ -20,7 +20,8 @@
     "js",
     "es6",
     "bin",
-    "cli"
+    "cli",
+    "leinov"
   ],
   "author": "leinov",
   "license": "MIT",
